@@ -21,6 +21,9 @@ function makeGrid(event) {
 	// Reset the form
 	this.reset();
 
+	// Fragment for containing the new rows
+	var newRows = document.createDocumentFragment();
+
 	// Loop through rows
 	for(let i = 0; i < gridHeight; i++) {
 
@@ -38,10 +41,13 @@ function makeGrid(event) {
 
 		}
 
-		// Append rows to the canvas table
-		canvas.appendChild(row);
+		// Append rows to the frgment
+		newRows.appendChild(row);
 
 	}
+
+	// Append the fragment to the canvas table
+	canvas.appendChild(newRows);
 
 }
 
