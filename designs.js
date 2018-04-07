@@ -60,8 +60,6 @@ function draw(e) {
 	// Check if target is a cell
 	if(e.target.nodeName == 'TD' && (penIsActive || eraserIsActive)) {
 
-		console.log('drawing');
-
 		let color;
 
 		if(penIsActive) {
